@@ -22,7 +22,7 @@
 
         // Create a psuedo class with the AND '&' keyword before the semicolon
         &:hover {
-            background: #333;
+            background: lighten($deepBlue, 1);
         }
     }
 } // end #main-nav
@@ -65,7 +65,7 @@ section h1 {
         color: $deepBlue;
         font-weight: bold;
         &:hover {
-            color: red;
+            color: complement($deepBlue);
         }
     }
     ul {
