@@ -12,6 +12,10 @@
     li {
         float: left;
         width: (100% / 6);
+        // this mixin defines the change in itself instead of the mixin that was created.
+        @include mQ(900px) {
+            width: 100%;
+          }
     }
     a {
         color: $offwhite;

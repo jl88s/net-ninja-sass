@@ -1,6 +1,4 @@
-// Mixins
-
-@mixin banner{
+@mixin banner {
     width: 100%;
     position: relative;
     color: white;
@@ -38,11 +36,16 @@
     float: left;
     margin-right: $mgn;
     margin-bottom: $mgn;
-    
+
     // Helpful way of creating a perfect spacing while using a bunch of columns and rows.
     width: ((100% - (($cols - 1) * $mgn)) / $cols );
     &:nth-child(#{$cols}n) {
         margin-right: 0;
     }
+}
 
+@mixin mQ($arg) {
+    @media screen and (max-width: $arg) {
+        @content;
+    }
 }
